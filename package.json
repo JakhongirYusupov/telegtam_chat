@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "sha256": "^0.2.0"
+  },
+  "name": "telegram_chat",
+  "type": "module",
+  "version": "1.0.0",
+  "imports": {},
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "keywords": [],
+  "author": "Jakhongir Yusupov",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
