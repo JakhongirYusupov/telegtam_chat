@@ -13,20 +13,26 @@ export const REGISTER = (req, res) => {
         let data = req.readData('users', 'user.json')
         data = data ? JSON.parse(data) : []
 
-        const token = jwt.sign({
-            "username": username
-        }, password)
+        let userId = data.length ? data[data.length - 1].userId + 1 : 1
+
         let user = {
-            "userId": data.length ? data[data.length - 1].userId + 1 : 1,
+            "userId": userId,
             "username": username,
             "password": password,
-            "profileImg": fileName,
-            "token": token
+            "profileImg": fileName
         }
+
+
         data.push(user)
         req.writeData('users', 'user.json', data)
 
+        const token = jwt.sign({
+            "userId": userId
+        }, process.env.TOKEN_KEY)
+
         delete user.password
+
+        user['token'] = token
         return res.send(user)
     } catch (error) {
         console.log(error);

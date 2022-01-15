@@ -1,0 +1,56 @@
+[
+    {
+        "userId": 1,
+        "messages:": [
+            {
+                "friendId": 2,
+                "messages": [
+                    {
+                        "date": 21742198,
+                        "message": "Hello friend?"
+                    },
+                    {
+                        "date": 21745465,
+                        "message": "How are you?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "userId": 2,
+        "messages:": [
+            {
+                "friendId": 1,
+                "messages": [
+                    {
+                        "date": 21742198,
+                        "message": "Hi"
+                    },
+                    {
+                        "date": 21745465,
+                        "message": "Good"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "userId": 3,
+        "messages:": [
+            {
+                "friendId": 2,
+                "messages": [
+                    {
+                        "date": 21742198,
+                        "message": "salom"
+                    },
+                    {
+                        "date": 21745465,
+                        "message": "qalesan"
+                    }
+                ]
+            }
+        ]
+    }
+]
