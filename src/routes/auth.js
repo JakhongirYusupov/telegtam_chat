@@ -1,12 +1,10 @@
 import { Router } from "express";
+import { REGISTER, LOGIN } from '../controller/auth.js'
+import { regValidation, logValidation } from '../middleware/validator.js'
 const router = Router()
 
-router.post('/register', (req, res) => {
-    res.send('register')
-})
+router.post('/register', regValidation, REGISTER)
 
-router.post('/login', (req, res) => {
-    res.send('login')
-})
+router.post('/login', logValidation, LOGIN)
 
 export default router
